@@ -322,7 +322,8 @@ textarea:focus {
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.about-me .why-me .accordion .acc-item .acc-title i {
+.about-me .why-me .accordion .acc-item .acc-title ion-icon {
+	font-size: 30px;
 	position: absolute;
 	right: 20px;
 	color: #181818;
@@ -339,7 +340,7 @@ textarea:focus {
 	color: #fff;
 	border-color: #181818;
 }
-.about-me .why-me .accordion .acc-item .acc-title.active i {
+.about-me .why-me .accordion .acc-item .acc-title.active ion-icon {
 	-webkit-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
 	transform: rotate(0deg);
@@ -355,3 +356,219 @@ textarea:focus {
 }
 
 /* End About me Section */
+.services .row {
+	display: flex;
+}
+.services .service {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+.services .service i {
+	font-size: 3.5rem;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	display: inline-block;
+	height: 95px;
+	width: 95px;
+	line-height: 95px;
+	color: #222;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.services .service ion-icon {
+	font-size: 20px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	display: inline-block;
+	height: 95px;
+	width: 95px;
+	line-height: 95px;
+	color: #222;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	padding: 10px;
+}
+.services .service:hover i {
+	background: #222;
+	color: #fff;
+	border: 1px solid #222;
+}
+.services .service:hover ion-icon {
+	background: #222;
+	color: #fff;
+	border: 1px solid #222;
+}
+.services .service h3 {
+	color: #333;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* ---------------------------------------
+		Start Technical Skills Section 
+----------------------------------------- */
+
+/* .skill-progress .outer .inner {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 1px solid red;
+} */
+.technical-skills {
+	/* background: #333 url('../img/coding-min.jpg') no-repeat 50% 80% fixed; */
+	background-size: cover;
+	position: relative;
+}
+.technical-skills h2 {
+	color: #eaeaea;
+	position: relative;
+}
+.technical-skills p.title {
+	color: #eaeaea;
+	position: relative;
+}
+.technical-skills .heading-line {
+	background: #fff;
+}
+.technical-skills .skills-wrapper {
+	margin-top: 40px;
+}
+.technical-skills .skill {
+	margin-bottom: 40px;
+}
+.technical-skills .skill .chart {
+	position: relative;
+	display: inline-block;
+	color: #eee;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.technical-skills .skill .chart > span {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 2.1rem;
+}
+.technical-skills .skill h2 {
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+/* .technical-skills .other-skills {
+	margin-top: 40px;
+}
+.technical-skills .bar_group {
+	text-align: left;
+	position: relative;
+	margin-bottom: 45px;
+}
+.technical-skills .bar_group__bar.thick {
+	width: 0%;
+	height: 10px;
+	border-radius: 6px;
+	background: #afa;
+	margin-bottom: 10px;
+	-webkit-transition: width 1s;
+	transition: width 1s;
+}
+.technical-skills .bar_group__bar.thick::before {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: 0;
+	opacity: 0.1;
+	width: 95%;
+	height: 10px;
+	border-radius: 6px;
+	background: #fff;
+}
+.technical-skills .b_label,
+.technical-skills .bar_label_min,
+.technical-skills .bar_label_max,
+.technical-skills .b_tooltip span {
+	color: #fff;
+	font-size: 15px;
+}
+.technical-skills .b_label {
+	display: inline-block;
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.technical-skills .b_label:hover {
+	background: #fff;
+	color: #111;
+}
+.technical-skills .bar_label_max,
+.technical-skills .bar_label_min {
+	position: absolute;
+	bottom: -10px;
+}
+.technical-skills .bar_label_max {
+	right: 20px;
+}
+.technical-skills .bar_label_min {
+	left: 20px;
+}
+.technical-skills .b_tooltip {
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	position: relative;
+	float: left;
+	left: 100%;
+	padding: 4px 10px 7px 10px;
+	background-color: rgba(255, 255, 255, 0.91);
+	-webkit-transform: translateX(-50%) translateY(-30px);
+	-ms-transform: translateX(-50%) translateY(-30px);
+	transform: translateX(-50%) translateY(-30px);
+	border-radius: 2px;
+	line-height: 11px;
+	box-shadow: 1px 1px 1px 1px #e2d9e2;
+}
+.technical-skills .b_tooltip span {
+	color: #000;
+}
+.technical-skills .b_tooltip--tri {
+	width: 0;
+	height: 0;
+	position: absolute;
+	content: '';
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: block;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: rgba(255, 255, 255, 0.81) transparent transparent transparent;
+}
+.technical-skills .bar_group .elastic {
+	background: #fff;
+	margin-bottom: 20px !important;
+	-webkit-transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
+	transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+} */
+
+/* End technical skills section */
