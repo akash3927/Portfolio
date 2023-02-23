@@ -432,9 +432,10 @@ textarea:focus {
 }
 .progress-bar-container .box .chart {
 	position: relative;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: #eee;
-	/* font-size: 16px; */
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -458,8 +459,36 @@ textarea:focus {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	font-size: 1.2rem;
+	font-size: 2.2rem;
 }
+.percent {
+	position: absolute;
+	top: 55px;
+	/* bottom: 20px; */
+	right: 30px;
+}
+/* .progress-bar-container .box .chart .percent {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 2.2rem;
+} */
 /* .technical-skills .skills-wrapper {
 	margin-top: 40px;
 }
@@ -496,17 +525,25 @@ textarea:focus {
 	bottom: 0;
 	font-size: 2.1rem;
 }
-.technical-skills .skill h2 {
+
+*/
+.progress-bar-container h2 {
 	margin-top: 10px;
 	text-transform: uppercase;
-} */
-/* .technical-skills .other-skills {
-	margin-top: 40px;
+}
+
+.technical-skills .skills-wrapper {
+	margin: 80px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.technical-skills .other-skills {
+	margin-top: 80px;
 }
 .technical-skills .bar_group {
 	text-align: left;
 	position: relative;
-	margin-bottom: 45px;
+	margin-bottom: 20px;
 }
 .technical-skills .bar_group__bar.thick {
 	width: 0%;
@@ -599,6 +636,6 @@ textarea:focus {
 	transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
-} */
+}
 
 /* End technical skills section */
