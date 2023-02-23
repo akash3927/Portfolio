@@ -387,6 +387,7 @@ textarea:focus {
 	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	padding: 10px;
+	cursor: poi;
 }
 .services .service:hover i {
 	background: #222;
@@ -408,14 +409,8 @@ textarea:focus {
 		Start Technical Skills Section 
 ----------------------------------------- */
 
-/* .skill-progress .outer .inner {
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-	border: 1px solid red;
-} */
 .technical-skills {
-	/* background: #333 url('../img/coding-min.jpg') no-repeat 50% 80% fixed; */
+	background: #333 url('../img/coding-min.jpg') no-repeat 50% 80% fixed;
 	background-size: cover;
 	position: relative;
 }
@@ -430,7 +425,42 @@ textarea:focus {
 .technical-skills .heading-line {
 	background: #fff;
 }
-.technical-skills .skills-wrapper {
+.progress-bar-container {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.progress-bar-container .box .chart {
+	position: relative;
+	display: inline-block;
+	color: #eee;
+	/* font-size: 16px; */
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.progress-bar-container .box .chart span {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 1.2rem;
+}
+/* .technical-skills .skills-wrapper {
 	margin-top: 40px;
 }
 .technical-skills .skill {
@@ -469,7 +499,7 @@ textarea:focus {
 .technical-skills .skill h2 {
 	margin-top: 10px;
 	text-transform: uppercase;
-}
+} */
 /* .technical-skills .other-skills {
 	margin-top: 40px;
 }

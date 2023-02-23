@@ -2,50 +2,69 @@
  * global $, alert, console
  *
  * @format
+ *
+ *
  */
+
+$(function () {
+	$('.chart').easyPieChart({
+		//your options goes here
+		barColor: '#eaeaea',
+		trackColor: false,
+		scaleColor: false,
+		lineWidth: 10,
+		lineCap: 'round',
+		size: 150,
+		animate: 1500,
+	});
+});
 // start easy pie chart plugin when skills section appear //
-$('#skills').appear(
-	function () {
-		$('.chart').easyPieChart({
-			barColor: '#eaeaea',
-			trackColor: false,
-			scaleColor: false,
-			lineWidth: 10,
-			lineCap: 'round',
-			size: 150,
-			animate: 1500,
-		});
-		// start numbers animate at skills section //
-		$('#chart_num_1').animateNumber(
-			{
-				number: 88,
-			},
-			1500,
-		);
-		$('#chart_num_2').animateNumber(
-			{
-				number: 75,
-			},
-			1500,
-		);
-		$('#chart_num_3').animateNumber(
-			{
-				number: 80,
-			},
-			1500,
-		);
-		$('#chart_num_4').animateNumber(
-			{
-				number: 60,
-			},
-			1500,
-		);
-	},
-	{
-		accX: 0,
-		accY: -150,
-	},
-);
+// $(document).ready(function () {
+// 	'use-strict';
+// 	$('#skills').appear(
+// 		function () {
+// 			$('.chart').easyPieChart({
+// 				barColor: '#eaeaea',
+// 				trackColor: false,
+// 				scaleColor: false,
+// 				lineWidth: 10,
+// 				lineCap: 'round',
+// 				size: 150,
+// 				animate: 1500,
+// 			});
+// 			// start numbers animate at skills section //
+// 			$('#chart_num_1').animateNumber(
+// 				{
+// 					number: 88,
+// 				},
+// 				1500,
+// 			);
+// 			$('#chart_num_2').animateNumber(
+// 				{
+// 					number: 75,
+// 				},
+// 				1500,
+// 			);
+// 			$('#chart_num_3').animateNumber(
+// 				{
+// 					number: 80,
+// 				},
+// 				1500,
+// 			);
+// 			$('#chart_num_4').animateNumber(
+// 				{
+// 					number: 60,
+// 				},
+// 				1500,
+// 			);
+// 		},
+// 		{
+// 			accX: 0,
+// 			accY: -150,
+// 		},
+// 	);
+// });
+
 // $(document).ready(function () {
 // 	'use-strict';
 
