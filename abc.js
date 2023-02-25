@@ -65,6 +65,31 @@ $(document).ready(function () {
 	);
 });
 
+var items = document.querySelectorAll('li');
+
+function isItemInView(item) {
+	var rect = item.getBoundingClientRect();
+	return (
+		rect.top >= 0 &&
+		rect.left >= 0 &&
+		rect.bottom <=
+			(window.innerHeight || document.documentElement.clientHeight) &&
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+}
+
+function callbackFunc() {
+	for (var i = 0; i < items.length; i++) {
+		if (isItemInView(items[i])) {
+			items[i].classList.add('show');
+		}
+	}
+}
+
+// listen for events
+window.addEventListener('load', callbackFunc);
+window.addEventListener('resize', callbackFunc);
+window.addEventListener('scroll', callbackFunc);
 // $(document).ready(function () {
 // 	'use-strict';
 
@@ -337,124 +362,124 @@ $(document).ready(function () {
 // /* Launching Google map */
 
 // // When the window has finished loading create our google map below
-// google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'load', init);
 
-// function init() {
-// 	// Basic options for a simple Google Map
-// 	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-// 	var mapOptions = {
-// 		// How zoomed in you want the map to start at (always required)
-// 		zoom: 17,
-// 		styles: [
-// 			{ elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
-// 			{ elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
-// 			{ elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
-// 			{
-// 				featureType: 'administrative.locality',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#d59563' }],
-// 			},
-// 			{
-// 				featureType: 'poi',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#d59563' }],
-// 			},
-// 			{
-// 				featureType: 'poi.park',
-// 				elementType: 'geometry',
-// 				stylers: [{ color: '#263c3f' }],
-// 			},
-// 			{
-// 				featureType: 'poi.park',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#6b9a76' }],
-// 			},
-// 			{
-// 				featureType: 'road',
-// 				elementType: 'geometry',
-// 				stylers: [{ color: '#38414e' }],
-// 			},
-// 			{
-// 				featureType: 'road',
-// 				elementType: 'geometry.stroke',
-// 				stylers: [{ color: '#212a37' }],
-// 			},
-// 			{
-// 				featureType: 'road',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#9ca5b3' }],
-// 			},
-// 			{
-// 				featureType: 'road.highway',
-// 				elementType: 'geometry',
-// 				stylers: [{ color: '#746855' }],
-// 			},
-// 			{
-// 				featureType: 'road.highway',
-// 				elementType: 'geometry.stroke',
-// 				stylers: [{ color: '#1f2835' }],
-// 			},
-// 			{
-// 				featureType: 'road.highway',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#f3d19c' }],
-// 			},
-// 			{
-// 				featureType: 'transit',
-// 				elementType: 'geometry',
-// 				stylers: [{ color: '#2f3948' }],
-// 			},
-// 			{
-// 				featureType: 'transit.station',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#d59563' }],
-// 			},
-// 			{
-// 				featureType: 'water',
-// 				elementType: 'geometry',
-// 				stylers: [{ color: '#17263c' }],
-// 			},
-// 			{
-// 				featureType: 'water',
-// 				elementType: 'labels.text.fill',
-// 				stylers: [{ color: '#515c6d' }],
-// 			},
-// 			{
-// 				featureType: 'water',
-// 				elementType: 'labels.text.stroke',
-// 				stylers: [{ color: '#17263c' }],
-// 			},
-// 		],
+function init() {
+	// Basic options for a simple Google Map
+	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	var mapOptions = {
+		// How zoomed in you want the map to start at (always required)
+		zoom: 17,
+		styles: [
+			{ elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+			{ elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+			{ elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+			{
+				featureType: 'administrative.locality',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#d59563' }],
+			},
+			{
+				featureType: 'poi',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#d59563' }],
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'geometry',
+				stylers: [{ color: '#263c3f' }],
+			},
+			{
+				featureType: 'poi.park',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#6b9a76' }],
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry',
+				stylers: [{ color: '#38414e' }],
+			},
+			{
+				featureType: 'road',
+				elementType: 'geometry.stroke',
+				stylers: [{ color: '#212a37' }],
+			},
+			{
+				featureType: 'road',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#9ca5b3' }],
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry',
+				stylers: [{ color: '#746855' }],
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'geometry.stroke',
+				stylers: [{ color: '#1f2835' }],
+			},
+			{
+				featureType: 'road.highway',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#f3d19c' }],
+			},
+			{
+				featureType: 'transit',
+				elementType: 'geometry',
+				stylers: [{ color: '#2f3948' }],
+			},
+			{
+				featureType: 'transit.station',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#d59563' }],
+			},
+			{
+				featureType: 'water',
+				elementType: 'geometry',
+				stylers: [{ color: '#17263c' }],
+			},
+			{
+				featureType: 'water',
+				elementType: 'labels.text.fill',
+				stylers: [{ color: '#515c6d' }],
+			},
+			{
+				featureType: 'water',
+				elementType: 'labels.text.stroke',
+				stylers: [{ color: '#17263c' }],
+			},
+		],
 
-// 		// The latitude and longitude to center the map (always required)
-// 		center: new google.maps.LatLng(23.0384, 72.5288),
+		// The latitude and longitude to center the map (always required)
+		center: new google.maps.LatLng(18.9169833, 74.0797095),
 
-// 		scrollwheel: false,
+		scrollwheel: false,
 
-// 		// How you would like to style the map.
-// 		// This is where you would paste any style found on Snazzy Maps.
-// 	};
+		// How you would like to style the map.
+		// This is where you would paste any style found on Snazzy Maps.
+	};
 
-// 	// Get the HTML DOM element that will contain your map
-// 	// We are using a div with id="map" seen below in the <body>
-// 	var mapElement = document.getElementById('map');
+	// Get the HTML DOM element that will contain your map
+	// We are using a div with id="map" seen below in the <body>
+	var mapElement = document.getElementById('map');
 
-// 	// Create the Google Map using our element and options defined above
-// 	var map = new google.maps.Map(mapElement, mapOptions);
+	// Create the Google Map using our element and options defined above
+	var map = new google.maps.Map(mapElement, mapOptions);
 
-// 	// Let"s also add a marker while we"re at it
-// 	var marker = new google.maps.Marker({
-// 		position: new google.maps.LatLng(23.0385, 72.5306),
-// 		//animation:google.maps.Animation.BOUNCE,
-// 		map: map,
-// 		title: 'Marqa Studio',
-// 	});
+	// Let"s also add a marker while we"re at it
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(23.0385, 72.5306),
+		//animation:google.maps.Animation.BOUNCE,
+		map: map,
+		title: 'Marqa Studio',
+	});
 
-// 	var infowindow = new google.maps.InfoWindow({
-// 		content: 'New Lake view society',
-// 	});
+	var infowindow = new google.maps.InfoWindow({
+		content: 'New Lake view society',
+	});
 
-// 	google.maps.event.addListener(marker, 'click', function () {
-// 		infowindow.open(map, marker);
-// 	});
-// }
+	google.maps.event.addListener(marker, 'click', function () {
+		infowindow.open(map, marker);
+	});
+}
