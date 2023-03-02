@@ -359,7 +359,21 @@ window.addEventListener('scroll', callbackFunc);
 // 		},
 // 	});
 // });
+
 // /* Launching Google map */
+var swiper = new Swiper('.mySwiper', {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
 
 // // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);

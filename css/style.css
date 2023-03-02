@@ -582,19 +582,74 @@ textarea:focus {
 
 /* End technical skills section */
 /* start portfolio section */
-.portfolio {
-}
-.portfolio .slide {
+.portfolio-section h1 {
+	margin-top: 30px;
 	display: flex;
-	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+}
+.portfolio-section .heading-line {
+	margin-left: 685px;
+}
+.swiper {
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-slide {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 }
-.portfolio .project-img {
-	width: 100px;
-	height: 100px;
+.portfolio {
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 50px;
+	margin-left: 500px;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
+
+.swiper-slide .project-img {
+	width: 200px;
+	height: 200px;
+	margin-right: 10px;
+}
+.pf-btns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 10px;
+}
+.pf-btns .pf-btn {
+	color: white;
+	background-color: #333;
+	width: 100px;
+	height: 30px;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+.pf-btns .pf-btn:hover {
+	color: #111;
+	background-color: #fff;
+}
+.swiper-button-prev {
+	background-color: rgb(181, 234, 231);
+	border-radius: 50%;
+	margin-left: 50px;
+	padding: 20px;
+}
+.swiper-button-next {
+	background-color: rgb(181, 234, 231);
+	border-radius: 50%;
+	margin-left: 50px;
+	padding: 20px;
+	margin-right: 50px;
+}
+
 /* End portfolio section */
 
 /* ---------------------------------------
