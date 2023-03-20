@@ -5,6 +5,20 @@
  *
  *
  */
+$('.loading').delay(1000).addClass('loaded');
+
+// Launching and adjusting NiceScroll plugin //
+$('html, body').niceScroll({
+	scrollspeed: 40,
+	mousescrollstep: 30,
+	zindex: 9999,
+	cursorwidth: 10,
+	cursorborder: false,
+	cursorborderradius: 0,
+	cursorcolor: '#111',
+});
+
+//for nav
 $(window).scroll(function () {
 	$('#top-nav, #menu').addClass('transition');
 	if ($(this).scrollTop() >= 600) {
@@ -44,9 +58,34 @@ $("a[href^='#']").on('click', function (event) {
 });
 
 //
+
+// Scroll Percentage //
+var scrollTimer = null;
+$(window).scroll(function () {
+	var viewportHeight = $(this).height(),
+		scrollbarHeight = (viewportHeight / $(document).height()) * viewportHeight,
+		progress = $(this).scrollTop() / ($(document).height() - viewportHeight),
+		distance =
+			progress * (viewportHeight - scrollbarHeight) +
+			scrollbarHeight / 2 -
+			$('#scroll').height() / 2;
+	$('#scroll')
+		.css('top', distance)
+		.text(' (' + Math.round(progress * 100) + '%)')
+		.fadeIn(100);
+
+	if (scrollTimer !== null) {
+		clearTimeout(scrollTimer);
+	}
+	scrollTimer = setTimeout(function () {
+		$('#scroll').fadeOut();
+	}, 800);
+});
+
 // start easy pie chart plugin when skills section appear //
 
 //
+
 $(document).ready(function () {
 	'use-strict';
 	$('#skills').appear(
