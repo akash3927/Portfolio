@@ -215,7 +215,7 @@ textarea:focus {
 ----------------------------------------- */
 
 nav {
-	position: sticky;
+	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -252,7 +252,7 @@ span.bar {
 	height: 5px;
 	margin-bottom: 5px;
 	border-radius: 5px;
-	background: #fff;
+	background: #3d3333;
 	display: block;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
